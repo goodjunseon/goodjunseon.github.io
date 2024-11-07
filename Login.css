@@ -1,0 +1,11 @@
+.formblock{
+    display: flex;
+    display: inline;
+}
+label{
+    display: flex;
+}
+.divId{
+    width: 72px;
+    text-align: right;
+}

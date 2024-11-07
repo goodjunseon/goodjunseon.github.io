@@ -1,0 +1,30 @@
+.Bar{
+    color: white;
+    background-color: black;
+    width: 20%;
+    display: inline-block;
+    text-decoration-line: none;
+    text-align: center;
+}
+.body{
+    background-color: black;
+    color:  white;
+}
+.Title{
+    text-align: center;
+    color: white;
+    background-color: black;
+    margin: 0px;
+
+}
+.link{
+    text-decoration:"none"; 
+    text-decoration-line: none;
+    color: white;
+    background-color: black;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+}
