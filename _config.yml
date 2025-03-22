@@ -1,5 +1,6 @@
 theme: jekyll-theme-chirpy
 
+Cache-Control: no-cache
 # The language of the webpage › http://www.lingoes.net/en/translator/langcode.htm
 # `_data/locales` 폴더에 있는 파일 중 하나와 같은 이름이 있는 경우 레이아웃 언어도 변경됩니다.
 # 그렇지 않으면 레이아웃 언어는 기본값인 'en'을 사용합니다.
