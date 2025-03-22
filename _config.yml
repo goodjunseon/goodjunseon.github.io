@@ -22,7 +22,7 @@ description: >- # used by seo meta and the atom feed
   컴퓨터공학과 박준선의 포트폴리오 및 기술 블로그입니다. 웹 개발, CS 내용을 공유합니다.
 
 #설명 내용
-baseurl: "" # 꼭 빈 문자열 유지
+baseurl: ""  # 절대 경로로 불러오기 위해 반드시 빈 문자열
 author:
   name: "Junseon Park"
   bio:  "AYU CSE Student"
