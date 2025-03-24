@@ -224,3 +224,10 @@ jekyll-archives:
   permalinks:
     tag: /tags/:name/
     category: /categories/:name/
+
+
+
+pwa:
+  enabled: true
+  cache:
+    enabled: false
