@@ -6,8 +6,6 @@ categories: [TroubleShooting]
 tags: [Spring boot, Thymeleaf, 오류해결]
 ---
 
-# 🛠 Spring Boot 게시판 프로젝트 오류 해결 기록: detail.html White Label Error
-
 ## 📌 문제 상황
 
 - 게시판 프로젝트에서 게시글을 작성한 뒤 상세 페이지(/board/{id})로 이동했을 때,
