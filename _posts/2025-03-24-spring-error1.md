@@ -1,7 +1,7 @@
 ---
 layout: post
 title: " 🛠Spring Boot @PathVariable 명시 누락 이슈"
-date: 2025-03-25 14:18:00 +0900
+date: 2025-03-24 14:18:00 +0900
 categories: [TroubleShooting]
 tags: [Spring Boot, Spring MVC, PathVariable, Thymeleaf, 트러블슈팅, 오류 해결]
 ---
