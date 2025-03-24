@@ -2,8 +2,8 @@
 layout: post
 title: "🧠 Spring Data JPA의 save() 메서드: Insert vs Update 구분 원리"
 date: 2025-03-24 16:00:00 +0900
-categories: [DevLog]
-tags: [Spring Boot, Spring Data JPA, JPA, Entity, save, Insert, Update, CRUD, 백엔드]
+categories: [technote]
+tags: [spring]
 ---
 
 ## ✅ 개요

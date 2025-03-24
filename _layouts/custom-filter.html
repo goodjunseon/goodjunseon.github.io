@@ -1,0 +1,23 @@
+---
+layout: page
+---
+
+{% assign filtered_posts = site.posts | where_exp: "post", "post.categories contains page.category and post.tags contains page.tag" %}
+
+<h1 class="mb-4">{{ page.title }}</h1>
+
+{% if filtered_posts != empty %}
+  <ul class="post-content pl-0">
+    {% for post in filtered_posts %}
+      <li class="d-flex justify-content-between">
+        <a href="{{ post.url | relative_url }}">
+          {{ post.title }}
+        </a>
+        <span class="dash flex-grow-1"></span>
+        <span class="text-muted small">{{ post.date | date: "%b %d, %Y" }}</span>
+      </li>
+    {% endfor %}
+  </ul>
+{% else %}
+  <p class="text-center mt-5">😢 해당 카테고리+태그 조합의 게시글이 없습니다.</p>
+{% endif %}

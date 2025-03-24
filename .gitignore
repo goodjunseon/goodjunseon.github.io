@@ -10,6 +10,8 @@ _site
 
 # RubyGems
 *.gem
+# MAC OS
+.DS_Store
 
 # NPM dependencies
 node_modules

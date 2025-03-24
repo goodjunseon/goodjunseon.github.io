@@ -1,10 +1,13 @@
 ---
-title: TechNote
-icon: fas fa-book
-order: 3
+title: technote
+icon: fas fa-tools
+order: 2
 ---
 
-🧠 기술 정리 카테고리 글들을 모아둔 공간입니다.
+🧠 개발 개념들을 정리합니다.
 
-👉 [**TechNote 글 목록 바로가기**](/categories/technote/)
-~
+### 📂 카테고리별 보기
+
+- [Spring](/technote/spring/)
+- [자료구조](/technote/자료구조/)
+- [데이터베이스](/technote/데이터베이스/)

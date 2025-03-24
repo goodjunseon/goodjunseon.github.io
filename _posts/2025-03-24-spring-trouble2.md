@@ -2,8 +2,8 @@
 layout: post
 title: "🛠 Spring Boot 게시판 프로젝트 오류 해결 기록: detail.html White Label Error"
 date: 2025-03-24 01:03:00 +0900
-categories: [TroubleShooting]
-tags: [Spring boot, Thymeleaf, 오류해결]
+categories: [troubleshooting]
+tags: [spring]
 ---
 
 ## 📌 문제 상황
