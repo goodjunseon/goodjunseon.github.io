@@ -50,6 +50,7 @@ jobs:
         env:
           JEKYLL_ENV: "production"
 
+# 이 부분은 아직 devlog에 파일이 없는데 페이지가 없으니 에러떠서 action에서 막아버리는 기능을 끈거임
       # - name: Test site
       #   run: |
       #     bundle exec htmlproofer _site \
