@@ -6,10 +6,10 @@ categories: [technote]
 tags: [spring]
 ---
 
- # ✅ Spring MVC 개념 정리하기 
+## ✅ Spring MVC 개념 정리하기 
  Spring Boot에서 ***MVC***(Model, View, Controller)패턴은 웹 애플리케이션을 구성할 때 관심사의 분리를 통해 개발과 유지보수를 용이하게 만드는 아키텍처입니다.
 
-## 📌 주요 구성요소
+### 📌 주요 구성요소
 - Model(모델):  
 애플리케이션의 데이터와 비즈니스 로직을 담당합니다. 데이터베이스에서 가져온 정보, 사용자의 입력, 비즈니스 규칙 등을 포함합니다. 컨트롤러와 뷰 사이에서 데이터를 주고받는 역할을 합니다.
 
@@ -19,7 +19,7 @@ tags: [spring]
 - Controller(컨트롤러):  
 사용자 요청을 처리, 모델과 뷰를 연결하는 역할을 합니다. HTTP 요청을 받아 적절한 비즈니스 로직을 수행하고, 그 결과를 모델에 담아 특정 뷰로 전달합니다. Spring에서는 @Controller 혹은 REST API를 위해 @RestController 어노테이션을 사용합니다.
 
-## 🚀 Spring Boot와 MVC의 동작 흐름
+### 🚀 Spring Boot와 MVC의 동작 흐름
 1. 요청 처리:  
 사용자가 웹 브라우저를 통해 HTTP 요청을 보내면, Spring Boot의 내장 서버(톰캣)가 요청을 받아 Spring MVC의 디스패처 서블릿(DispatcherServlet)으로 전달합니다..
 
@@ -33,10 +33,10 @@ tags: [spring]
 모델에 담긴 데이터를 기반으로 템플릿 엔진(예: Thymeleaf)이 HTML 등 적절한 뷰를 생성하여 사용자에게 응답합니다.
 
 
-# ✅ 역할 분리를 위한 Entity와 DTO 개념
+## ✅ 역할 분리를 위한 Entity와 DTO 개념
 Spring boot같은 프레임워크를 사용할 때 자주 등장하는 두가지 개념, Entity와 DTO(Data Transfer Object)에 대해 자세히 알아보고자 합니다.
 
-## 🔍 Entity란?
+### 🔍 Entity란?
 Entity는 주로 데이터베이스와 직접적으로 연관된 객체를 의미합니다. 데이터베이스 테이블과 맵핑되어 영속성(persistence)을 관리하는 역할을 합니다. 예를들어, JPA(Java Persistence API)를 사용하는 Spring Boot 애플리케이션에서는 @Entity 어노테이션을 붙여 해당 클래스가 데이터베이스 테이블과 맵핑 되도록 설정합니다.
 
 ### Entity의 주요 특징
@@ -44,7 +44,7 @@ Entity는 주로 데이터베이스와 직접적으로 연관된 객체를 의�
 - 도메인 로직 포함: 간단한 비즈니스 로직이나 상태 관리 로직을 포함할 수 있습니다.
 - 식별자: 각 Entity는 고유 식별자(@ID로 지정)를 갖습니다.
 
-## 🔍DTO란?
+### 🔍DTO란?
 DTO는 계층 간 데이터 전송을 위한 객체입니다. 주로 컨트롤러와 서비스, 또는 서버와 클라이언트 간에 데이터를 주고 받을 때 사용됩니다. DTO는 데이터만 담고 있으며, 복잡한 비즈니스 로직이나 영속성 관련 로직은 포함되지 않습니다.
 
 ### DTO의 주요 특징
