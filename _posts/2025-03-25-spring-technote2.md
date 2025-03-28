@@ -52,5 +52,66 @@ DTO는 계층 간 데이터 전송을 위한 객체입니다. 주로 컨트롤�
 - 구조 단순화: Entity와 달리 복잡한 관계를 제거하고, 필요한 필드만 포함하여 구조를 단순화합니다.
 - 보안강화: 민감한 정보(예: 비밀번호, 내부 ID 등)를 제외한 데이터만 전달할 수 있습니다.
 
-### 정리하자면..
+### 🤔 정리하자면
 Entity는 중요한 데이터(예: 데이터베이스에 저장된 정보)를 담은 "안전한 상자"와 같아서, 직접적으로 외부에서 접근하거나 수정하면 안되는 정보를 보호합니다. 반면, DTO는 이 Entity의 데이터중 필요한 부분만 복사해 "새로운 상자"에 담아 계층 간 혹은 클라이언트와의 통신 등 외부로 전달할 때 사용하는 도구입니다.
+
+## ✅ Attribute와 Model, Session 개념 정리하기
+
+Spring Boot를 공부하다 보면 Attribute, Model, Session이라는 용어가 자주 등장합니다.  
+특히 model.addAttribute()와 session.setAttribute()는 거의 필수적으로 사용됩니다.  
+저같은 초보 개발자는 "Attribute가 뭐지?", "Model과 Session은 뭐가 다르지?" 라고 헷갈리기 쉽습니다.
+
+이번 글에서는 이 세 가지 개념을 한 번에 쉽게 정리해보겠습니다.
+
+### 📌 Attribute란 무엇인가?
+Attribute(속성)은 (이름,값) 형태의 데이터입니다.  
+쉽게말해서, **Key-Value** 형태의 데이터 저장 공간이라고 생각하면 됩니다.  
+Spring에서는 이 Attribute를 다양한 Scope에 저장할 수 있습니다.
+
+|Attribute 저장 위치|주요 메서드|범위|
+|:---:|:---:|:---:|
+|Request Scope|	model.addAttribute("key", value)|요청(Request)와 응답(Response) 사이|
+|Session Scope|session.setAttribute("key", value)|세션 유지 기간 동안 (로그인 상태 등)|
+|Application Scope |application.setAttribute("key", value)|서버가 켜져있는 동안 전체 애플리케이션|
+
+### 📌 Model이란 무엇인가?
+Model은 Attribute를 전달하는 가방과 같습니다.  
+주로 Controller에서 View로 데이터를 전달할 때 사용합니다.  
+즉, 화면(View)에 보여줄 데이터를 임시로 저장하는 역할을 합니다.
+
+사용자가 요청한 화면에 보여줄 데이터가 있을 때, 게시글 목록, 회원 이름 등 화면에 필요한 데이터를 담을 때 사용합니다.
+
+Coneroller 예시
+```java
+@GetMapping("/greeting")
+public String greeting(Model model) {
+    model.addAttribute("nickname", "준선");
+    return "greeting";
+}
+```
+nickname이라는 Attribute를 Model에 추가, View로 전달
+
+
+아래는 View(Thymleaf) 예시
+```html
+<p>안녕하세요, [[${nickname}]]님!</p>
+
+```
+
+👉 화면에 "안녕하세요, 준선님!" 
+
+### 📌 Sessoin과 Model의 창이
+
+|구분|Model|Session|
+|:---:|:---:|:---:|
+|사용 목적|	View에 데이터 전달 (임시)|사용자 상태 정보 저장 (로그인 정보 등 장기)|
+|유지기간|1번 요청/응답 동안 유지|브라우저 세션 종료 전까지 유지|
+|데이터 접근|View 템플릿 엔진에서 사용 (${key})|모든 Controller, View에서 접근 가능 (session.getAttribute())|
+
+### 🤔 정리하자면
+>Attribute란, (이름, 값) 형태로 데이터를 저장하는 데이터 속성입니다.
+Spring MVC에서는 주로 Model과 Session에 Attribute를 저장하여 데이터를 전달하거나 보관합니다.
+
+- Model → View로 데이터 "전달"할 때 사용 (임시)
+- Session → 사용자 상태 정보 "저장"할 때 사용 (지속적)
+
