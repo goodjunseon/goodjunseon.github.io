@@ -6,7 +6,6 @@ import {
   Github,
   Linkedin,
   Mail,
-  Phone,
   ExternalLink,
   ArrowRight,
   Terminal,
@@ -1338,11 +1337,6 @@ export default function App() {
                 icon: <TistoryIcon size={18} />,
                 label: "Blog",
                 href: "https://goodjunseon-tech-blog.tistory.com/",
-              },
-              {
-                icon: <Phone size={18} />,
-                label: "010-9137-2835",
-                href: "tel:01091372835",
               },
             ].map((link) => (
               <a
