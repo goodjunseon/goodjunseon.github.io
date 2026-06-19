@@ -82,7 +82,6 @@ const PROJECTS = [
     title: "PASSTIVAL",
     tagline: "안양대학교 축제 올인원 서비스",
     highlights: [
-      "백엔드 리드로 전체 설계 및 배포 인프라 구축",
       "Nginx 로드밸런서로 Spring 서버 2대 이중화 — ALB 대비 비용 절감하며 가용성 확보",
       "GitHub Actions + AWS OIDC + SSM 기반 무(無)SSH 롤링 배포 파이프라인 구축",
       "축제 3일간 방문자 10,005 · PV 102,226 · 만족도 4.8/5.0(74명)",
