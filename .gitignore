@@ -1,0 +1,20 @@
+# dependencies
+node_modules/
+
+# build output
+dist/
+
+# local tooling / OS
+.claude/
+.DS_Store
+*.log
+npm-debug.log*
+
+# 개인 자료 (공개 레포에 포함하지 않음)
+이력서_포트폴리오_박준선.pdf
+description_goodjunseon.md
+profile.jpg
+
+# 사용하지 않는 Figma export 보일러플레이트
+default_shadcn_theme.css
+guidelines/
